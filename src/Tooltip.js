@@ -3,19 +3,18 @@ import React, { useState } from 'react'
 function Tooltip({ position }){
 
     // setting the state to toggle the visibility
-    const [flag, setFlag] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
     function handleMouseIn() {
-        setFlag(true);
+        setIsVisible(true);
     }
     
     function handleMouseOut() {
-        setFlag(false);
-
+        setIsVisible(false);
     }
     
     // toggling the visibility of the tooltip
-    const visibility = { display: flag ? "block" : "none" }
+    const visibility = { display: isVisible ? "block" : "none" }
 
     return (
         <div>
